@@ -87,6 +87,7 @@ fn main() {
 
 */
 
+/*
 fn main() {
     stack_fn();   // Call the function that uses stack memory
     heap_fn();    // Call the function that uses heap memory
@@ -118,4 +119,25 @@ fn update_string() {
     s.push_str(" and some additional text");
     println!("After update: {}", s);
     print!("Capacity:{},Length:{},Pointer:{:p}",s.capacity(),s.len(),s.as_ptr());
+}
+*/
+
+/*
+fn main(){
+    //Ownership
+    let s1 = String::from("hello");
+    println!("{}",s1);
+    let s2 = s1;
+    println!("{}",s2)
+}
+*/
+
+fn main() {
+    let my_string = String::from("hello");
+    onefun(my_string);
+    println!("{}", my_string); 
+}
+
+fn onefun(some_string: String) {
+    println!("{}", some_string); 
 }
